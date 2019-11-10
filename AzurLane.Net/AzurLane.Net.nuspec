@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+    <metadata>
+        <id>AzurLane.Net</id>
+        <version>1.0.0</version>
+        <title>AzurLane.Net</title>
+        <authors>Kurozero</authors>
+        <owners>Kurozero</owners>
+        <projectUrl>https://github.com/KurozeroPB/AzurLane.Net</projectUrl>
+        <repository type="git" url="https://github.com/KurozeroPB/AzurLane.Net" />
+        <license type="expression">GPL-3.0-only</license>
+        <icon>icon.png</icon>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Wrapper for the unofficial azur lane api</description>
+        <releaseNotes>Initial release</releaseNotes>
+        <copyright>Copyright 2020</copyright>
+        <tags>azurlane azur lane waifu shipfu anime manga ani C# csharp dotnet dotnetcore</tags>
+        <summary>This package allows you to easily interact with the unofficial azur lane json api. The package does all the deserialization for you!</summary>
+        <dependencies>
+            <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin/Release/netstandard2.1/AzurLane.Net.dll" target="lib/netstandard2.1/AzurLane.Net.dll" />
+        <file src="image/icon.png" target="" />
+    </files>
+</package>

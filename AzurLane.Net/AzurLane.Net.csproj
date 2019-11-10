@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <NuspecFile>AzurLane.Net.nuspec</NuspecFile>
+</PropertyGroup>
+<ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+</ItemGroup>
+</Project>
