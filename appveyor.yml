@@ -1,0 +1,24 @@
+version: '1.0.{build}'
+image: Visual Studio 2017
+branches:
+  only:
+  - master
+init:
+  - cmd: git config --global core.autoctrlf true
+install:
+  # Nothing to be done here
+before_build:
+  - cmd: dotnet --version
+  - cmd: dotnet restore ./AzurLane.Net/AzurLane.Net.csproj --verbosity m
+build_script:
+  - cmd: dotnet publish ./AzurLane.Net/AzurLane.Net.csproj
+after_build:
+  # Nothing to be done here either
+artifacts:
+ - path: '\AzurLane.Net\bin\Debug\netstandard2.1\publish'
+   name: AzurLane.Net
+   type: WebDeployPackage
+clone_depth: 1
+on_finish :
+  # Nothing to be done here either
+deploy: off
