@@ -29,7 +29,10 @@ namespace AzurLane.Net.Ships
         {
             var json = await Api.Client.GetStringAsync($"{Api.BaseUrl}/ships?orderBy={order.Value}&{order.Value}={value}");
             var response = JsonConvert.DeserializeObject<ShipsResponseModel>(json);
-            if (response.Ships != null) return response.Ships;
+            if (response.Ships != null)
+            {
+                return response.Ships;
+            }
             var error = JsonConvert.DeserializeObject<ErrorResponse>(json);
             throw new ErrorResponseException(error);
         }

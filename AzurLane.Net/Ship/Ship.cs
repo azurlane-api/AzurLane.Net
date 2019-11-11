@@ -16,7 +16,10 @@ namespace AzurLane.Net.Ship
         {
             var json = await Api.Client.GetStringAsync($"{Api.BaseUrl}/ship?name={name}");
             var response = JsonConvert.DeserializeObject<ShipResponseModel>(json);
-            if (response.Ship != null) return response.Ship;
+            if (response.Ship != null)
+            {
+                return response.Ship;
+            }
             var error = JsonConvert.DeserializeObject<ErrorResponse>(json);
             throw new ErrorResponseException(error);
         }
@@ -31,7 +34,10 @@ namespace AzurLane.Net.Ship
         {
             var json = await Api.Client.GetStringAsync($"{Api.BaseUrl}/ship?id={id}");
             var response = JsonConvert.DeserializeObject<ShipResponseModel>(json);
-            if (response.Ship != null) return response.Ship;
+            if (response.Ship != null)
+            {
+                return response.Ship;
+            }
             var error = JsonConvert.DeserializeObject<ErrorResponse>(json);
             throw new ErrorResponseException(error);
         }

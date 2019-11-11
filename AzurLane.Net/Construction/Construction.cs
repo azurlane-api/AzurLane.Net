@@ -16,7 +16,10 @@ namespace AzurLane.Net.Construction
         {
             var json = await Api.Client.GetStringAsync($"{Api.BaseUrl}/build?time={time}");
             var response = JsonConvert.DeserializeObject<ConstructionResponseModel>(json);
-            if (response.Construction != null) return response.Construction;
+            if (response.Construction != null)
+            {
+                return response.Construction;
+            }
             var error = JsonConvert.DeserializeObject<ErrorResponse>(json);
             throw new ErrorResponseException(error);
         }
