@@ -4,3 +4,36 @@
 
 # AzurLane.Net
 .Net wrapper for the unofficial azur lane api
+
+## Example
+```cs
+using System;
+using System.Threading.Tasks;
+using AzurLane.Net;
+using AzurLane.Net.Ships;
+
+namespace Example
+{
+    public class Program
+    {
+        public async Task Main()
+        {
+            try
+            {
+                var ships = await Ships.GetListAsync(Order.Rarity, "Super Rare");
+                foreach (var ship in ships)
+                {
+                    Console.WriteLine($"[{ship.Id}]: ({ship.Name})");
+                }
+            }
+            catch (ErrorResponseException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
+}
+```
+
+## Support
+![discord](https://discordapp.com/api/v6/guilds/240059867744698368/widget.png?style=banner2)
