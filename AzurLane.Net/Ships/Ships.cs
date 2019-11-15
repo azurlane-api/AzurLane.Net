@@ -27,7 +27,7 @@ namespace AzurLane.Net.Ships
         /// <exception cref="ErrorResponseException"></exception>
         public static async Task<List<ShipModel>> GetListAsync(Category category, string value)
         {
-            var json = await Api.Client.GetStringAsync($"{Api.BaseUrl}/ships?orderBy={category.Value}&{category.Value}={value}");
+            var json = await Api.Client.GetStringAsync($"{Api.BaseUrl}/ships?category={category.Value}&{category.Value}={value}");
             var response = JsonConvert.DeserializeObject<ShipsResponseModel>(json);
             if (response.Ships != null)
             {

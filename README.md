@@ -20,7 +20,7 @@ namespace Example
         {
             try
             {
-                var ships = await Ships.GetListAsync(Order.Rarity, "Super Rare");
+                var ships = await Ships.GetListAsync(Category.Rarity, "Super Rare");
                 foreach (var ship in ships)
                 {
                     Console.WriteLine($"[{ship.Id}]: ({ship.Name})");
