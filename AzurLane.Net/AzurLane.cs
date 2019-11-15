@@ -7,7 +7,7 @@ namespace AzurLane.Net
 {
     public static class Api
     {
-        public static readonly string Version = "1.1.0";
+        public static readonly string Version = "1.1.1";
         private static readonly string UserAgent = $"AzurLane.Net/v{Version} (https://github.com/azurlane-api/AzurLane.Net)";
 
         internal const string BaseUrl = "https://azurlane-api.herokuapp.com/v2";
