@@ -55,11 +55,11 @@ namespace AzurLane.Net.Ship
 
     public class StatsModel : IStats
     {
-        [JsonProperty("100")]
-        public List<StatDataModel>? Hundred { get; private set; }
+        [JsonProperty("level100")]
+        public List<StatDataModel>? Level100 { get; private set; }
         
-        [JsonProperty("120")]
-        public List<StatDataModel>? HundredTwenty { get; private set; }
+        [JsonProperty("level120")]
+        public List<StatDataModel>? Level120 { get; private set; }
         
         [JsonProperty("base")]
         public List<StatDataModel>? Base { get; private set; }

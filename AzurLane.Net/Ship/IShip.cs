@@ -35,8 +35,8 @@ namespace AzurLane.Net.Ship
 
     public interface IStats
     {
-        List<StatDataModel>? Hundred { get; }
-        List<StatDataModel>? HundredTwenty { get; }
+        List<StatDataModel>? Level100 { get; }
+        List<StatDataModel>? Level120 { get; }
         List<StatDataModel>? Base { get; }
         List<StatDataModel>? RetrofitHundred { get; }
         List<StatDataModel>? RetrofitHundredTwenty { get; }
