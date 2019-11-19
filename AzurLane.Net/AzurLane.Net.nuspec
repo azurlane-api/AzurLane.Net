@@ -2,7 +2,7 @@
 <package>
     <metadata>
         <id>AzurLane.Net</id>
-        <version>1.1.1</version>
+        <version>1.2.0</version>
         <title>AzurLane.Net</title>
         <authors>Kurozero</authors>
         <owners>Kurozero</owners>
@@ -12,7 +12,7 @@
         <icon>icon.png</icon>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Wrapper for the unofficial azur lane api</description>
-        <releaseNotes>Update to v2</releaseNotes>
+        <releaseNotes>Support setting api token</releaseNotes>
         <copyright>Copyright 2020</copyright>
         <tags>azurlane azur lane waifu shipfu anime manga ani C# csharp dotnet dotnetcore</tags>
         <summary>This package allows you to easily interact with the unofficial azur lane json api. The package does all the deserialization for you!</summary>
